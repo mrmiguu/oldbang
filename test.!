@@ -1,0 +1,22 @@
+!main
+
+// this is a variable
+number : int
+
+// this is the main function
+main ::
+    println "Here I am!"
+
+    nums : [3]int
+    vals : []string
+    for i :=< nums
+        vals []= strconv.Itoa i
+        nums[i] = i
+
+    fmt.Println vals
+    print "fold", sum nums...
+
+// this sums up integers
+sum :: n ...int; s int
+    for i :=< n
+        s += i

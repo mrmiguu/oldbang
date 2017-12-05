@@ -1,0 +1,32 @@
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+// this is a variable
+var number int
+
+// this is the main function
+func main() {
+	println("Here I am!")
+
+	var nums [3]int
+	var vals []string
+	for i := range nums {
+		vals = append(vals, strconv.Itoa(i))
+		nums[i] = i
+	}
+
+	fmt.Println(vals)
+	print("fold", sum(nums[:]...))
+}
+
+// this sums up integers
+func sum(n ...int) (s int) {
+	for i := range n {
+		s += i
+	}
+	return
+}
