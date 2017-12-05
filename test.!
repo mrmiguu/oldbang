@@ -1,22 +1,41 @@
 !main
 
-// this is a variable
-number : int
 
-// this is the main function
+// this is supposed to stop the sum function short
+short : float64 = -1.0
+
+
 main ::
     println "Here I am!"
 
     nums : [3]int
     vals : []string
-    for i :=< nums
+
+    for i :=@ nums
         vals []= strconv.Itoa i
         nums[i] = i
 
     fmt.Println vals
     print "fold", sum nums...
 
-// this sums up integers
+
+nothing : bool
+
+
 sum :: n ...int; s int
-    for i :=< n
+    for i :=@ n
+        if short != -1.0
+            ! // this is a return; we're shorting
         s += i
+
+
+min :: a, b int; int
+    if a < b
+        a!
+    b!
+
+
+max :: a, b int; int
+    if a > b
+        a!
+    b!
